@@ -7479,7 +7479,7 @@ var hasCSS3DTransforms = !!prefixes_1.getVendorPrefixedName('perspective');
 var ua = window ? window.navigator.userAgent : "Chrome";
 var isSafari = (/Safari\//).test(ua) && !(/Chrome\//).test(ua);
 function translateXY(styles, x, y) {
-    if (hasCSSTransforms) {
+    if (typeof transform !== 'undefined' && hasCSSTransforms) {
         if (!isSafari && hasCSS3DTransforms) {
             styles[transform] = "translate3d(" + x + "px, " + y + "px, 0)";
             styles[backfaceVisibility] = 'hidden';
