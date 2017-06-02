@@ -6706,7 +6706,7 @@ exports.columnsByPinArr = columnsByPinArr;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-if (document !== undefined && !document.elementsFromPoint) {
+if (typeof document !== 'undefined' && !document.elementsFromPoint) {
     document.elementsFromPoint = elementsFromPoint;
 }
 /*tslint:disable*/
