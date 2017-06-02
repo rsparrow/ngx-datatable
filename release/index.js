@@ -7472,11 +7472,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var prefixes_1 = __webpack_require__("./src/utils/prefixes.ts");
 var camel_case_1 = __webpack_require__("./src/utils/camel-case.ts");
 // browser detection and prefixing tools
-var transform = prefixes_1.getVendorPrefixedName('transform');
-var backfaceVisibility = prefixes_1.getVendorPrefixedName('backfaceVisibility');
-var hasCSSTransforms = !!prefixes_1.getVendorPrefixedName('transform');
-var hasCSS3DTransforms = !!prefixes_1.getVendorPrefixedName('perspective');
-var ua = window ? window.navigator.userAgent : "Chrome";
+var transform = typeof window !== 'undefined' ? prefixes_1.getVendorPrefixedName('transform') : undefined;
+var backfaceVisibility = typeof window !== 'undefined' ? prefixes_1.getVendorPrefixedName('backfaceVisibility') : undefined;
+var hasCSSTransforms = typeof window !== 'undefined' ? !!prefixes_1.getVendorPrefixedName('transform') : undefined;
+var hasCSS3DTransforms = typeof window !== 'undefined' ? !!prefixes_1.getVendorPrefixedName('perspective') : undefined;
+var ua = typeof window !== 'undefined' ? window.navigator.userAgent : "Chrome";
 var isSafari = (/Safari\//).test(ua) && !(/Chrome\//).test(ua);
 function translateXY(styles, x, y) {
     if (typeof transform !== 'undefined' && hasCSSTransforms) {
