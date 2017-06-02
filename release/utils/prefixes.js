@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var camel_case_1 = require("./camel-case");
 var cache = {};
-var testStyle = document !== undefined ? document.createElement('div').style : undefined;
+var testStyle = typeof document !== 'undefined' ? document.createElement('div').style : undefined;
 // Get Prefix
 // http://davidwalsh.name/vendor-prefix
 var prefix = (function () {
