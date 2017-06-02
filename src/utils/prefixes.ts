@@ -1,7 +1,7 @@
 import { camelCase } from './camel-case';
 
 const cache = {};
-const testStyle = document !== undefined ? document.createElement('div').style : undefined;
+const testStyle = typeof document !== 'undefined' ? document.createElement('div').style : undefined;
 
 // Get Prefix
 // http://davidwalsh.name/vendor-prefix
